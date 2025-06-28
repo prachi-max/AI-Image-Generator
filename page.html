@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravaah - AI Fashion Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .buttons button {
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .signin {
+            background: none;
+            color: black;
+        }
+        .create {
+            background: blue;
+            color: white;
+            border-radius: 5px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: white;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            margin-left: 10px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background: blue;
+            color: white;
+            border-radius: 5px;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 50px;
+            background: white;
+        }
+        .image-gallery img {
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .image-gallery img:nth-child(1) {
+            transform: rotate(-10deg);
+        }
+        .image-gallery img:nth-child(2) {
+            transform: rotate(0deg);
+        }
+        .image-gallery img:nth-child(3) {
+            transform: rotate(10deg);
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .categories {
+            text-align: center;
+            padding: 50px;
+            background: #eae8ff;
+        }
+        .categories h2 {
+            margin-bottom: 20px;
+        }
+        .category-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .category-buttons button {
+            padding: 15px 25px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <h2>Pravaah</h2>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">AI Generator</a>
+            <a href="#">Gallery</a>
+            <a href="#">How It Works</a>
+        </nav>
+        <div class="buttons">
+            <button class="signin">Sign In</button>
+            <button class="create">Create Design</button>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>Turn Your Fashion Ideas Into Reality</h1>
+        <p>Generate stunning fashion designs with AI. Describe your perfect outfit, accessory, or runway look, and watch it come to life.</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Describe your fashion item: color, design, material...">
+            <button onclick="searchFashion()">Search</button>
+            <button onclick="generateAI()">AI Generator</button>
+        </div>
+    </section>
+    
+    <section class="image-gallery">
+        <img src="img1.jpg" alt="Fashion Image 1">
+        <img src="img2.jpg" alt="Fashion Image 2">
+        <img src="img3.jpg" alt="Fashion Image 3">
+    </section>
+    
+    <section class="categories">
+        <h2>Browse Categories</h2>
+        <div class="category-buttons">
+            <button>👕 Clothing</button>
+            <button>👞 Shoes</button>
+            <button>👜 Bags</button>
+            <button>⌚ Watches</button>
+            <button>💎 Rings</button>
+            <button>👑 Necklaces</button>
+            <button>💍 Bracelets</button>
+            <button>✨ Runway</button>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <h3>Pravaah</h3>
+        <p>Turning fashion ideas into visual designs with the power of AI</p>
+        <div>
+            <p><strong>COMPANY</strong></p>
+            <p>About | Careers | Contact</p>
+        </div>
+        <div>
+            <p><strong>RESOURCES</strong></p>
+            <p>Blog | FAQs | Support</p>
+        </div>
+        <div>
+            <p><strong>LEGAL</strong></p>
+            <p>Privacy | Terms | Copyright</p>
+        </div>
+        <p>&copy; 2025 Pravaah. All rights reserved.</p>
+    </footer>
+</body>
+</html>
